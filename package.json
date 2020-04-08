@@ -1,0 +1,41 @@
+{
+  "name": "normalize-steuernummer",
+  "version": "0.0.0",
+  "description": "Normalize a German steuernummer to the national format",
+  "keywords": [
+    "canonical",
+    "deutschland",
+    "elster",
+    "german",
+    "germany",
+    "normalisation",
+    "normalization",
+    "normalize",
+    "steuernummer",
+    "tax",
+    "tax number",
+    "taxes"
+  ],
+  "license": "UNLICENSED",
+  "repository": "kontist/normalize-steuernummer",
+  "author": "Kontist GmbH (kontist.com)",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1",
+    "standard": "^14.3.3"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "private": true,
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
