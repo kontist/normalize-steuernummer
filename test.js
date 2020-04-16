@@ -31,3 +31,10 @@ for (const example of elsterExamples) {
     assert.strictEqual(normalizeSteuernummer(example.steuernummer, example.stateCode), example.expected)
   })
 }
+
+it('throws an error if steuernummer is not a string', () => {
+  assert.throws(() => normalizeSteuernummer(2181508150), {
+    name: 'TypeError',
+    message: '`steuernummer` must be a string'
+  })
+})
