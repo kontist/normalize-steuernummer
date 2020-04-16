@@ -4,6 +4,16 @@ const parse = (steuernummer, state) => {
   // Remove slashes and spaces as included in official letters.
   steuernummer = steuernummer.replace(/[/ ]/g, '')
 
+  const statesWith10Digits = ['DE-BW', 'DE-BE', 'DE-HB', 'DE-HH', 'DE-NI', 'DE-RP', 'DE-SH']
+  if (steuernummer.length !== 10 && statesWith10Digits.includes(state)) {
+    throw new TypeError(`\`steuernummer\` for ${state} must contain exactly 10 digits`)
+  }
+
+  const statesWith11Digits = ['DE-BY', 'DE-BB', 'DE-HE', 'DE-MV', 'DE-NW', 'DE-SL', 'DE-SN', 'DE-ST', 'DE-TH']
+  if (steuernummer.length !== 11 && statesWith11Digits.includes(state)) {
+    throw new TypeError(`\`steuernummer\` for ${state} must contain exactly 11 digits`)
+  }
+
   // See “Standardschema der Länder” on https://www.elster.de/eportal/helpGlobal?themaGlobal=wo%5Fist%5Fmeine%5Fsteuernummer%5Feop#aufbauSteuernummer.
   switch (state) {
     case 'DE-BW':

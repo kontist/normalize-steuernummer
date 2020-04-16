@@ -39,6 +39,20 @@ it('throws an error if steuernummer is not a string', () => {
   })
 })
 
+it('throws an error if steuernummer does not contain 10 digits', () => {
+  assert.throws(() => normalizeSteuernummer('181/815/08155', 'DE-BE'), {
+    name: 'TypeError',
+    message: '`steuernummer` for DE-BE must contain exactly 10 digits'
+  })
+})
+
+it('throws an error if steuernummer does not contain 11 digits', () => {
+  assert.throws(() => normalizeSteuernummer('21/815/08150', 'DE-BY'), {
+    name: 'TypeError',
+    message: '`steuernummer` for DE-BY must contain exactly 11 digits'
+  })
+})
+
 it('throws an error if state is not a string', () => {
   assert.throws(() => normalizeSteuernummer('21/815/08150', 1), {
     name: 'TypeError',
