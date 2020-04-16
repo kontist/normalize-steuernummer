@@ -75,6 +75,10 @@ module.exports = (steuernummer, state) => {
     throw new TypeError('`steuernummer` must be a string')
   }
 
+  if (typeof state !== 'string') {
+    throw new TypeError('`state` must be a string')
+  }
+
   const tokens = parse(steuernummer, state)
   return compile(tokens, state)
 }

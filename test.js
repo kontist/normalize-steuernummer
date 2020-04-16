@@ -38,3 +38,10 @@ it('throws an error if steuernummer is not a string', () => {
     message: '`steuernummer` must be a string'
   })
 })
+
+it('throws an error if state is not a string', () => {
+  assert.throws(() => normalizeSteuernummer('21/815/08150', 1), {
+    name: 'TypeError',
+    message: '`state` must be a string'
+  })
+})
