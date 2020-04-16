@@ -59,3 +59,10 @@ it('throws an error if state is not a string', () => {
     message: '`state` must be a string'
   })
 })
+
+it('throws an error if state is unknown', () => {
+  assert.throws(() => normalizeSteuernummer('21/815/08150', 'DE-AB'), {
+    name: 'TypeError',
+    message: '`state` must be a German ISO 3166-2 code'
+  })
+})

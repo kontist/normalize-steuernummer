@@ -40,6 +40,8 @@ const parse = (steuernummer, state) => {
     case 'DE-NW':
       // Format: FFF/BBBB/UUUP.
       return steuernummer.match(/(?<fff>\d{3})(?<bbbb>\d{4})(?<uuu>\d{3})(?<p>\d{1})/).groups
+    default:
+      throw new TypeError('`state` must be a German ISO 3166-2 code')
   }
 }
 
