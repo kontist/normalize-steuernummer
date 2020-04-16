@@ -16,7 +16,7 @@
     "tax number",
     "taxes"
   ],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": "kontist/normalize-steuernummer",
   "author": "Kontist GmbH (kontist.com)",
   "files": [
