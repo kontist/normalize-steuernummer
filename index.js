@@ -4,13 +4,13 @@ const parse = (steuernummer, state) => {
   // Remove slashes and spaces as included in official letters.
   steuernummer = steuernummer.replace(/[/ ]/g, '')
 
-  const statesWith10Digits = ['DE-BW', 'DE-BE', 'DE-HB', 'DE-HH', 'DE-NI', 'DE-RP', 'DE-SH']
-  if (steuernummer.length !== 10 && statesWith10Digits.includes(state)) {
+  const statesWith10Digits = new Set(['DE-BW', 'DE-BE', 'DE-HB', 'DE-HH', 'DE-NI', 'DE-RP', 'DE-SH'])
+  if (steuernummer.length !== 10 && statesWith10Digits.has(state)) {
     throw new TypeError(`\`steuernummer\` for ${state} must contain exactly 10 digits`)
   }
 
-  const statesWith11Digits = ['DE-BY', 'DE-BB', 'DE-HE', 'DE-MV', 'DE-NW', 'DE-SL', 'DE-SN', 'DE-ST', 'DE-TH']
-  if (steuernummer.length !== 11 && statesWith11Digits.includes(state)) {
+  const statesWith11Digits = new Set(['DE-BY', 'DE-BB', 'DE-HE', 'DE-MV', 'DE-NW', 'DE-SL', 'DE-SN', 'DE-ST', 'DE-TH'])
+  if (steuernummer.length !== 11 && statesWith11Digits.has(state)) {
     throw new TypeError(`\`steuernummer\` for ${state} must contain exactly 11 digits`)
   }
 
