@@ -20,16 +20,18 @@
   "repository": "kontist/normalize-steuernummer",
   "author": "Kontist GmbH (kontist.com)",
   "files": [
+    "index.d.ts",
     "index.js"
   ],
   "scripts": {
-    "test": "standard '**/*.{js,ts}' && mocha"
+    "test": "standard '**/*.{js,ts}' && mocha && tsd"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "mocha": "^7.1.1",
     "standard": "^14.3.3",
+    "tsd": "^0.11.0",
     "typescript": "^3.9.3"
   },
   "engines": {
