@@ -23,11 +23,14 @@
     "index.js"
   ],
   "scripts": {
-    "test": "standard && mocha"
+    "test": "standard '**/*.{js,ts}' && mocha"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "mocha": "^7.1.1",
-    "standard": "^14.3.3"
+    "standard": "^14.3.3",
+    "typescript": "^3.9.3"
   },
   "engines": {
     "node": ">=10"
@@ -35,6 +38,10 @@
   "standard": {
     "env": [
       "mocha"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
     ]
   }
 }
