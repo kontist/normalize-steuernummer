@@ -29,7 +29,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "mocha": "^7.1.1",
+    "mocha": "^8.0.1",
     "standard": "^14.3.3",
     "tsd": "^0.13.1",
     "typescript": "^3.9.3"
