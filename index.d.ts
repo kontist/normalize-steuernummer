@@ -22,11 +22,11 @@ declare namespace normalizeSteuernummer {
 // eslint-disable-next-line no-redeclare
 declare const normalizeSteuernummer: (
   /**
-  Normalize a German *steuernummer* to the national format.
+  Normalize a German tax number (*Steuernummer*) to the national format
 
   @param steuernummer - [German *steuernummer*](https://de.wikipedia.org/wiki/Steuernummer#Deutschland) (tax number).
   @param state - State (*bundesland*) as [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2:DE).
-  @returns German *steuernummer* in the national format.
+  @returns German tax number (*Steuernummer*) in the national format.
 
   @example
   ```

@@ -1,7 +1,7 @@
 {
   "name": "normalize-steuernummer",
   "version": "1.0.0",
-  "description": "Normalize a German steuernummer to the national format",
+  "description": "Normalize a German tax number (Steuernummer) to the national format",
   "keywords": [
     "canonical",
     "deutschland",

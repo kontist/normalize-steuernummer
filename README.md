@@ -1,6 +1,6 @@
 # normalize-steuernummer
 
-> Normalize a German *steuernummer* to the national format
+> Normalize a German tax number (*Steuernummer*) to the national format
 
 ## Installation
 
