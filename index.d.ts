@@ -24,8 +24,8 @@ declare const normalizeSteuernummer: (
   /**
   Normalize a German tax number (*Steuernummer*) to the national format
 
-  @param steuernummer - [German *steuernummer*](https://de.wikipedia.org/wiki/Steuernummer#Deutschland) (tax number).
-  @param state - State (*bundesland*) as [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2:DE).
+  @param steuernummer - [German tax number](https://de.wikipedia.org/wiki/Steuernummer#Deutschland) (*Steuernummer*).
+  @param state - State (*Bundesland*) as [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2:DE).
   @returns German tax number (*Steuernummer*) in the national format.
 
   @example

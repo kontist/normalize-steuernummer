@@ -28,10 +28,10 @@ normalizeSteuernummer('75 815 08152', 'DE-HB')
 
 Type: `string`
 
-[German *steuernummer*](https://de.wikipedia.org/wiki/Steuernummer#Deutschland) (tax number).
+[German tax number](https://de.wikipedia.org/wiki/Steuernummer#Deutschland) (*Steuernummer*).
 
 #### state
 
 Type: `string`
 
-State (*bundesland*) as [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2:DE).
+State (*Bundesland*) as [ISO 3166-2 code](https://en.wikipedia.org/wiki/ISO_3166-2:DE).
