@@ -27,8 +27,8 @@
     "test": "standard '**/*.{js,ts}' && mocha && tsd"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
     "mocha": "^9.0.3",
     "standard": "^16.0.3",
     "tsd": "^0.17.0",

@@ -1,4 +1,6 @@
 declare namespace normalizeSteuernummer {
+  // See https://github.com/typescript-eslint/typescript-eslint/issues/2867.
+  // eslint-disable-next-line no-unused-vars
   type State =
     | 'DE-BW'
     | 'DE-BY'
