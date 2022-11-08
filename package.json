@@ -31,7 +31,7 @@
     "@typescript-eslint/parser": "^5.5.0",
     "mocha": "^10.0.0",
     "standard": "^17.0.0",
-    "tsd": "^0.20.0",
+    "tsd": "^0.24.1",
     "typescript": "^3.9.3"
   },
   "engines": {
