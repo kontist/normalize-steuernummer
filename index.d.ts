@@ -18,10 +18,13 @@ declare namespace normalizeSteuernummer {
     | 'DE-ST'
     | 'DE-SH'
     | 'DE-TH'
+
+  interface ReverseNormalizedOutput {
+    state: State | State[]
+    steuernummer: string
+  }
 }
 
-// See https://github.com/typescript-eslint/typescript-eslint/issues/1856.
-// eslint-disable-next-line no-redeclare
 declare const normalizeSteuernummer: (
   /**
   Normalize a German tax number (*Steuernummer*) to the national format
@@ -32,7 +35,7 @@ declare const normalizeSteuernummer: (
 
   @example
   ```
-  import normalizeSteuernummer = require('normalize-steuernummer')
+  import { normalizeSteuernummer } from 'normalize-steuernummer'
 
   normalizeSteuernummer('21/815/08150', 'DE-BE')
   ```
@@ -41,4 +44,21 @@ declare const normalizeSteuernummer: (
   state: normalizeSteuernummer.State
 ) => string
 
-export = normalizeSteuernummer
+declare const reverseNormalized: (
+  /**
+  Reverses a normalized German tax number to its original format
+
+  @param normalized - German tax number in the national format.
+  @returns An object containing the original tax number and potential state.
+
+  @example
+  ```
+  import { reverseNormalized } from 'normalize-steuernummer'
+
+  reverseNormalized('1121081508150')
+  ```
+  */
+  normalized: string
+) => normalizeSteuernummer.ReverseNormalizedOutput
+
+export { normalizeSteuernummer, reverseNormalized }
